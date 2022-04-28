@@ -1,0 +1,52 @@
+{
+  "name": "countdown-circle-timer-monorepo",
+  "private": true,
+  "description": "Lightweight React/React Native countdown timer component with color and progress animation based on SVG",
+  "scripts": {
+    "build": "pnpm recursive build",
+    "test": "pnpm recursive test",
+    "test-coverage": "pnpm recursive test-coverage",
+    "dev:push": "pnpm recursive dev:push",
+    "postinstall": "pnpx simple-git-hooks"
+  },
+  "homepage": "https://github.com/vydimitrov/react-countdown-circle-timer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vydimitrov/react-countdown-circle-timer.git"
+  },
+  "keywords": [
+    "react",
+    "react native",
+    "countdown",
+    "timer",
+    "circle",
+    "clock",
+    "SVG"
+  ],
+  "author": "Vasil Dimitrov",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/react-hooks": "7.0.2",
+    "@types/jest": "27.0.3",
+    "@types/node": "16.11.12",
+    "@types/react": "17.0.37",
+    "@types/react-dom": "17.0.11",
+    "esbuild": "0.14.2",
+    "jest": "27.1.0",
+    "nano-staged": "0.5.0",
+    "prettier": "2.3.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "simple-git-hooks": "2.7.0",
+    "ts-jest": "27.1.2",
+    "typescript": "4.5.3"
+  },
+  "nano-staged": {
+    "**/*.{ts,tsx}": "prettier --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged"
+  }
+}
