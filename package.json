@@ -1,5 +1,6 @@
 {
   "name": "countdown-circle-timer-monorepo",
+  "version": "0.1.0",
   "private": true,
   "description": "Lightweight React/React Native countdown timer component with color and progress animation based on SVG",
   "scripts": {
