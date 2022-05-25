@@ -8,7 +8,7 @@
     "test": "pnpm recursive test",
     "test-coverage": "pnpm recursive test-coverage",
     "dev:push": "pnpm recursive dev:push",
-    "postinstall": "pnpx simple-git-hooks"
+    "postinstall": "pnpm simple-git-hooks"
   },
   "homepage": "https://github.com/vydimitrov/react-countdown-circle-timer#readme",
   "repository": {
