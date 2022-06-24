@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 importers:
 
@@ -22,8 +22,8 @@ importers:
       typescript: 4.5.3
     devDependencies:
       '@testing-library/jest-dom': 5.14.1
-      '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
-      '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
+      '@testing-library/react': 12.1.2_sfoxds7t5ydpegc3knd667wn6m
+      '@testing-library/react-hooks': 7.0.2_sfoxds7t5ydpegc3knd667wn6m
       '@types/jest': 27.0.3
       '@types/node': 16.11.12
       '@types/react': 17.0.37
@@ -35,7 +35,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       simple-git-hooks: 2.7.0
-      ts-jest: 27.1.2_40a022b4e859e5175276165f458f440a
+      ts-jest: 27.1.2_icqcfnhilhsroutwczpuld2ebi
       typescript: 4.5.3
 
   packages/mobile:
@@ -58,21 +58,21 @@ importers:
       '@babel/runtime': 7.12.5
       '@countdown/shared': link:../shared
       '@testing-library/jest-native': 4.0.2
-      '@testing-library/react-native': 7.2.0_72feb4442a9257875272743762335b9a
+      '@testing-library/react-native': 7.2.0_pgarhyor6s7mfhxi6sh36iifnm
       '@types/jest': 26.0.23
       '@types/react-native': 0.64.2
       '@types/react-test-renderer': 16.9.2
       babel-jest: 26.6.3_@babel+core@7.12.9
       metro-react-native-babel-preset: 0.64.0
-      react-native: 0.64.2_react@17.0.2
-      react-native-svg: 12.1.1_react-native@0.64.2+react@17.0.2
-      react-test-renderer: 17.0.2_react@17.0.2
+      react-native: 0.64.2
+      react-native-svg: 12.1.1_react-native@0.64.2
+      react-test-renderer: 17.0.2
 
   packages/shared:
     specifiers:
       use-elapsed-time: 3.0.4
     dependencies:
-      use-elapsed-time: 3.0.4_react@17.0.2
+      use-elapsed-time: 3.0.4
 
   packages/web:
     specifiers:
@@ -399,6 +399,8 @@ packages:
     resolution: {integrity: sha512-6V0qdPUaiVHH3RtZeLIsc+6pDhbYzHR8ogA8w+f+Wc77DuXto19g2QUwveINoS34Uw+W8/hQDGJCx+i4n7xcng==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.0
     dev: true
 
   /@babel/plugin-proposal-class-properties/7.16.0_@babel+core@7.16.0:
@@ -1500,6 +1502,8 @@ packages:
     resolution: {integrity: sha512-5gGKaaXYOVE423BUqxIfvfAVSj5Cg1cU/TpGbeg/iqpy2CfqyWqJB3tTuVUbOOiOvR5wbU8tti6pIi1pchJ+oA==}
     dependencies:
       serve-static: 1.14.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@react-native-community/cli-hermes/5.0.1:
@@ -1551,6 +1555,10 @@ packages:
       pretty-format: 26.6.2
       serve-static: 1.14.1
       ws: 1.1.5
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
     dev: true
 
   /@react-native-community/cli-tools/5.0.1:
@@ -1609,14 +1617,16 @@ packages:
       ora: 3.4.0
       pretty-format: 26.6.2
       prompts: 2.4.2
-      react-native: 0.64.2_react@17.0.2
+      react-native: 0.64.2
       semver: 6.3.0
       serve-static: 1.14.1
       strip-ansi: 5.2.0
       sudo-prompt: 9.2.1
       wcwidth: 1.0.1
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: true
 
   /@react-native/assets/1.0.0:
@@ -1697,7 +1707,7 @@ packages:
       redent: 2.0.0
     dev: true
 
-  /@testing-library/react-hooks/7.0.2_react-dom@17.0.2+react@17.0.2:
+  /@testing-library/react-hooks/7.0.2_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-dYxpz8u9m4q1TuzfcUApqi8iFfR6R0FaMbr2hjZJy1uC8z+bO/K4v8Gs9eogGKYQop7QsrBTFkv/BCF7MzD2Cg==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1719,7 +1729,7 @@ packages:
       react-error-boundary: 3.1.4_react@17.0.2
     dev: true
 
-  /@testing-library/react-native/7.2.0_72feb4442a9257875272743762335b9a:
+  /@testing-library/react-native/7.2.0_pgarhyor6s7mfhxi6sh36iifnm:
     resolution: {integrity: sha512-rDKzJjAAeGgyoJT0gFQiMsIL09chdWcwZyYx6WZHMgm2c5NDqY52hUuyTkzhqddMYWmSRklFphSg7B2HX+246Q==}
     peerDependencies:
       react: '>=16.0.0'
@@ -1727,12 +1737,11 @@ packages:
       react-test-renderer: '>=16.0.0'
     dependencies:
       pretty-format: 26.6.2
-      react: 17.0.2
-      react-native: 0.64.2_react@17.0.2
-      react-test-renderer: 17.0.2_react@17.0.2
+      react-native: 0.64.2
+      react-test-renderer: 17.0.2
     dev: true
 
-  /@testing-library/react/12.1.2_react-dom@17.0.2+react@17.0.2:
+  /@testing-library/react/12.1.2_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-ihQiEOklNyHIpo2Y8FREkyD1QAea054U0MVbwH1m8N9TxeFz+KoJ9LkqoKqJlzx2JDm56DVwaJ1r36JYxZM05g==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -2015,6 +2024,8 @@ packages:
     dependencies:
       micromatch: 3.1.10
       normalize-path: 2.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /anymatch/3.1.2:
@@ -2409,6 +2420,8 @@ packages:
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /braces/3.0.2:
@@ -2709,6 +2722,8 @@ packages:
       on-headers: 1.0.2
       safe-buffer: 5.1.2
       vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /concat-map/0.0.1:
@@ -2723,6 +2738,8 @@ packages:
       finalhandler: 1.1.2
       parseurl: 1.3.3
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /convert-source-map/1.8.0:
@@ -2850,6 +2867,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -3328,6 +3350,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /expect/27.4.2:
@@ -3369,6 +3393,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /fast-json-stable-stringify/2.1.0:
@@ -3413,6 +3439,8 @@ packages:
       parseurl: 1.3.3
       statuses: 1.5.0
       unpipe: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /find-cache-dir/2.1.0:
@@ -4186,6 +4214,8 @@ packages:
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /jest-haste-map/27.4.2:
@@ -4884,6 +4914,8 @@ packages:
       metro-core: 0.64.0
       mkdirp: 0.5.5
       rimraf: 2.7.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /metro-config/0.64.0:
@@ -4896,7 +4928,9 @@ packages:
       metro-core: 0.64.0
       metro-runtime: 0.64.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: true
 
   /metro-core/0.64.0:
@@ -4905,6 +4939,8 @@ packages:
       jest-haste-map: 26.6.2
       lodash.throttle: 4.1.1
       metro-resolver: 0.64.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /metro-hermes-compiler/0.64.0:
@@ -4919,6 +4955,10 @@ packages:
       debug: 2.6.9
       ws: 1.1.5
       yargs: 15.4.1
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
     dev: true
 
   /metro-minify-uglify/0.64.0:
@@ -5055,7 +5095,9 @@ packages:
       metro-transform-plugins: 0.64.0
       nullthrows: 1.1.1
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: true
 
   /metro/0.64.0:
@@ -5114,7 +5156,9 @@ packages:
       ws: 1.1.5
       yargs: 15.4.1
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: true
 
   /micromatch/3.1.10:
@@ -5134,6 +5178,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /micromatch/4.0.4:
@@ -5243,6 +5289,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /natural-compare/1.4.0:
@@ -5724,7 +5772,7 @@ packages:
       - supports-color
     dev: true
 
-  /react-native-svg/12.1.1_react-native@0.64.2+react@17.0.2:
+  /react-native-svg/12.1.1_react-native@0.64.2:
     resolution: {integrity: sha512-NIAJ8jCnXGCqGWXkkJ1GTzO4a3Md5at5sagYV8Vh4MXYnL4z5Rh428Wahjhh+LIjx40EE5xM5YtwyJBqOIba2Q==}
     peerDependencies:
       react: '*'
@@ -5732,11 +5780,10 @@ packages:
     dependencies:
       css-select: 2.1.0
       css-tree: 1.1.3
-      react: 17.0.2
-      react-native: 0.64.2_react@17.0.2
+      react-native: 0.64.2
     dev: true
 
-  /react-native/0.64.2_react@17.0.2:
+  /react-native/0.64.2:
     resolution: {integrity: sha512-Ty/fFHld9DcYsFZujXYdeVjEhvSeQcwuTGXezyoOkxfiGEGrpL/uwUZvMzwShnU4zbbTKDu2PAm/uwuOittRGA==}
     engines: {node: '>=12'}
     hasBin: true
@@ -5765,7 +5812,6 @@ packages:
       pretty-format: 26.6.2
       promise: 8.1.0
       prop-types: 15.7.2
-      react: 17.0.2
       react-devtools-core: 4.21.0
       react-native-codegen: 0.0.6
       react-refresh: 0.4.3
@@ -5773,7 +5819,7 @@ packages:
       scheduler: 0.20.2
       shelljs: 0.8.4
       stacktrace-parser: 0.1.10
-      use-subscription: 1.5.1_react@17.0.2
+      use-subscription: 1.5.1
       whatwg-fetch: 3.6.2
       ws: 6.2.2
     transitivePeerDependencies:
@@ -5788,25 +5834,23 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-shallow-renderer/16.14.1_react@17.0.2:
+  /react-shallow-renderer/16.14.1:
     resolution: {integrity: sha512-rkIMcQi01/+kxiTE9D3fdS959U1g7gs+/rborw++42m1O9FAQiNI/UNRZExVUoAOprn4umcXf+pFRou8i4zuBg==}
     peerDependencies:
       react: ^16.0.0 || ^17.0.0
     dependencies:
       object-assign: 4.1.1
-      react: 17.0.2
       react-is: 17.0.2
     dev: true
 
-  /react-test-renderer/17.0.2_react@17.0.2:
+  /react-test-renderer/17.0.2:
     resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
     peerDependencies:
       react: 17.0.2
     dependencies:
       object-assign: 4.1.1
-      react: 17.0.2
       react-is: 17.0.2
-      react-shallow-renderer: 16.14.1_react@17.0.2
+      react-shallow-renderer: 16.14.1
       scheduler: 0.20.2
     dev: true
 
@@ -6045,6 +6089,8 @@ packages:
       micromatch: 3.1.10
       minimist: 1.2.5
       walker: 1.0.8
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /sax/1.2.4:
@@ -6105,6 +6151,8 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /serialize-error/2.1.0:
@@ -6120,6 +6168,8 @@ packages:
       escape-html: 1.0.3
       parseurl: 1.3.3
       send: 0.17.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /set-blocking/2.0.0:
@@ -6258,6 +6308,8 @@ packages:
       source-map: 0.5.7
       source-map-resolve: 0.5.3
       use: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /source-map-resolve/0.5.3:
@@ -6564,7 +6616,7 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /ts-jest/27.1.2_40a022b4e859e5175276165f458f440a:
+  /ts-jest/27.1.2_icqcfnhilhsroutwczpuld2ebi:
     resolution: {integrity: sha512-eSOiJOWq6Hhs6Khzk5wKC5sgWIXgXqOCiIl1+3lfnearu58Hj4QpE5tUhQcA3xtZrELbcvAGCsd6HB8OsaVaTA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -6707,21 +6759,18 @@ packages:
     deprecated: Please see https://github.com/lydell/urix#deprecated
     dev: true
 
-  /use-elapsed-time/3.0.4_react@17.0.2:
+  /use-elapsed-time/3.0.4:
     resolution: {integrity: sha512-q9b9j0K1SfsX2B9vzfRYkNyn2kBV5YBh9oJ/+XnIPKFjLbjvnF2PnJ/08HWPfCKKBWGz8d1qAfmXiYxWAseklw==}
     peerDependencies:
       react: '>=16.8.0'
-    dependencies:
-      react: 17.0.2
     dev: false
 
-  /use-subscription/1.5.1_react@17.0.2:
+  /use-subscription/1.5.1:
     resolution: {integrity: sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0
     dependencies:
       object-assign: 4.1.1
-      react: 17.0.2
     dev: true
 
   /use/3.1.1:
@@ -6896,6 +6945,14 @@ packages:
 
   /ws/1.1.5:
     resolution: {integrity: sha512-o3KqipXNUdS7wpQzBHSe180lBGO60SoK0yVo3CYJgb2MkobuWuBX6dhkYP5ORCLd55y+SaflMOV5fqAB53ux4w==}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     dependencies:
       options: 0.0.6
       ultron: 1.0.2
@@ -6903,6 +6960,14 @@ packages:
 
   /ws/6.2.2:
     resolution: {integrity: sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     dependencies:
       async-limiter: 1.0.1
     dev: true
